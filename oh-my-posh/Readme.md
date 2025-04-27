@@ -8,6 +8,6 @@
 - [Oh My Posh GitHub Repository](https://github.com/JanDeDobbeleer/oh-my-posh) - Source code and issue tracker for Oh My Posh.
 - [Themes Gallery](https://ohmyposh.dev/docs/themes) - Explore and preview available themes for Oh My Posh.
 
-### Extensions
+### Plugins
 - [kubectx & kubens](https://github.com/ahmetb/kubectx) - Quality of life addons for k8s context and namespace switching
 - [lsd](https://github.com/lsd-rs/lsd) - Better ls for shell
