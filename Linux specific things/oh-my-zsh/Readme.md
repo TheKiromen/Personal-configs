@@ -1,5 +1,19 @@
 # Useful Links
 
+## Programs
+#### Daily usage
+- [JetBrains Rider](https://www.jetbrains.com/rider/download/#section=windows)
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [OpenLens](https://github.com/MuhammedKalkan/OpenLens)
+- [Visual Studio Code](https://code.visualstudio.com/)
+
+#### Extensions
+- [Open Lens node pod menu](https://github.com/alebcay/openlens-node-pod-menu) - Additional options in context menus
+- [TabsCopier](https://addons.mozilla.org/en-US/firefox/addon/tabs-copier/) - Firefox extension for copying tabs
+
+<br>
+
+## Terminal stuff
 ### Oh My ZSH setup
 - [ZSH Installation Guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) - 
 - [Themes Gallery](https://github.com/ohmyzsh/ohmyzsh/wiki/themes) - Explore and preview available themes for Oh My ZSH.
