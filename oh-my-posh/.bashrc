@@ -1,7 +1,11 @@
-# TODO: Update this file with latest configurations from second workstation
-
+# Initialize Oh My Posh and set the theme
 eval "$(oh-my-posh init bash --config ~/BashThemes/powerlevel10k_rainbow.omp.json)"
 
-shopt -s autocd
+# Append history after each command
+shopt -s histappend
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 
-alias ls='lsd'
+# Aliases
+alias ls='lsd -la'
+alias tf='terraform'
+alias q='exit'
