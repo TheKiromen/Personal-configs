@@ -12,5 +12,5 @@ chsh -s $(which zsh)
 # Setup ZSH plugins
 echo "Setting up ZSH plugins..."
 
-# Setup .zshrc
+# Setup .zshrc and themes
 echo "Setting up .zshrc..."

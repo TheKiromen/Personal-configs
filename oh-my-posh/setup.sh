@@ -4,9 +4,11 @@ choco install -y oh-my-posh
 choco install -y terraform
 choco install -y kubens kubectx
 
+# Setup OMP
+echo "Setting up OMP..."
 
-# Run oh-my-posh setup
+# Setup OMP plugins
+echo "Setting up OMP plugins..."
 
-# Pull bash configs and themes
-
-# Save configs on local machine
+# Setup .bashrc and themes
+echo "Setting up .bashrc..."
