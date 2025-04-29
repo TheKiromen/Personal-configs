@@ -23,7 +23,7 @@ rm JetBrainsMono.zip
 FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
 cp "$FONT_DIR/$FONT_FILE" "/c/Windows/Fonts/"
 # Register the font with the system
-REG_FONT_NAME="JetBrainsMono TEST"
+REG_FONT_NAME="JetBrainsMono NFM Medium"
 REG_FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
 reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "$REG_FONT_NAME (TrueType)" /t REG_SZ /d "$REG_FONT_FILE" /f
 fc-cache -f -v # Refresh cache just in case
