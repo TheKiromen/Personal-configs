@@ -1,4 +1,16 @@
 #!/bin/bash
-apt install terraform #TODO: Verify if this works or needs old command
+
+# Install packages
+echo "Installing packages..."
 apt install git-all
-apt install kubectx #TODO: Verify if kubens is also installed with it
+
+# Setup ZSH
+echo "Setting up ZSH..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+chsh -s $(which zsh)
+
+# Setup ZSH plugins
+echo "Setting up ZSH plugins..."
+
+# Setup .zshrc
+echo "Setting up .zshrc..."
