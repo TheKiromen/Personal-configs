@@ -21,28 +21,28 @@ WT_CONFIG="$LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalS
 #     "startingDirectory": "E:\\Projekty"
 # }
 
-# TODO: Download the fonts into temp folder in CWD
 # Pull the font from the repo
 echo "Installing JetBrains Mono font..."
-FONT_DIR="$HOME/fonts/JetBrainsMono"
+FONT_DIR="tmp"
+FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
+
 mkdir -p $FONT_DIR
 cd $FONT_DIR
 curl -L -o "JetBrainsMono.zip" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
 unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
 # Install the font into windows
-FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
-cp "$FONT_DIR/$FONT_FILE" "/c/Windows/Fonts/"
-# Register the font with the system
+# TODO: Pass the font file to the script as an argument
 # powershell -ExecutionPolicy Bypass -File .\\font.ps1
-cd $HOME
+cd ".."
+rm tmp -r
 
-# Set the font in git bash config
-if grep -q '^Font=' ~/.minttyrc; then
-    sed -i '/^Font=/c\Font=JetBrainsMono NFM Medium' ~/.minttyrc
-else
-    echo 'Font=JetBrainsMono NFM Medium' >> ~/.minttyrc
-fi
+# # Set the font in git bash config
+# if grep -q '^Font=' ~/.minttyrc; then
+#     sed -i '/^Font=/c\Font=JetBrainsMono NFM Medium' ~/.minttyrc
+# else
+#     echo 'Font=JetBrainsMono NFM Medium' >> ~/.minttyrc
+# fi
 
 # Set the font in Windows Terminal config
 # TODO: Grep for bash profile section and replace font.face param
