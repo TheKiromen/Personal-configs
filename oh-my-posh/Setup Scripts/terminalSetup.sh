@@ -25,10 +25,11 @@ WT_CONFIG="$LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalS
 echo "Installing JetBrains Mono font..."
 FONT_DIR="tmp"
 FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
+FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
 
 mkdir -p $FONT_DIR
 cd $FONT_DIR
-curl -L -o "JetBrainsMono.zip" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
+curl -L -o "JetBrainsMono.zip" $FONT_URL
 unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
 # Install the font into windows
