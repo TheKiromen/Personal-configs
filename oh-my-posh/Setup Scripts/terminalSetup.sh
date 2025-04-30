@@ -21,7 +21,7 @@ WT_CONFIG="$LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalS
 #     "startingDirectory": "E:\\Projekty"
 # }
 
-
+# TODO: Download the fonts into temp folder in CWD
 # Pull the font from the repo
 echo "Installing JetBrains Mono font..."
 FONT_DIR="$HOME/fonts/JetBrainsMono"
@@ -34,10 +34,7 @@ rm JetBrainsMono.zip
 FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
 cp "$FONT_DIR/$FONT_FILE" "/c/Windows/Fonts/"
 # Register the font with the system
-REG_FONT_NAME="JetBrainsMono NFM Medium"
-REG_FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
-reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" /v "$REG_FONT_NAME (TrueType)" /t REG_SZ /d "$REG_FONT_FILE" /f
-fc-cache -f -v # Refresh cache just in case
+# powershell -ExecutionPolicy Bypass -File .\\font.ps1
 cd $HOME
 
 # Set the font in git bash config
