@@ -4,6 +4,8 @@
 #### Setup script prerequisites
 - [Chocolatey](https://chocolatey.org/install#individual)
 - [Git Bash](https://gitforwindows.org/)
+
+<!-- TRYING TO DO IT THROUGH SCRIPT, MIGHT BE OPTIONAL -->
 - [Git Bash in Terminal](https://www.youtube.com/watch?v=aQDsgCV4US0&) - Youtube video showing how to easily setup GitBash as default shell in windows Terminal
 - [Download Windows Terminal without MS store](https://github.com/microsoft/terminal/releases)
 
