@@ -2,7 +2,7 @@
 
 # Download windows terminal from Github releases
 echo "Installing Windows Terminal..."
-choco install microsoft-windows-terminal # TODO: Verify if this works without ms store
+# choco install microsoft-windows-terminal # TODO: Verify if this works without ms store
 # Create profile for Git Bash
 WT_CONFIG="$LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
 ####################################### CURRENT CONFIG BLOCK #######################################
@@ -24,7 +24,8 @@ WT_CONFIG="$LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalS
 # Pull the font from the repo
 echo "Installing JetBrains Mono font..."
 FONT_DIR="tmp"
-FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
+# FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
+FONT_FILE="JetBrainsMonoNerdFontMono-ExtraBoldItalic.ttf"
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
 
 mkdir -p $FONT_DIR
@@ -33,7 +34,9 @@ curl -L -o "JetBrainsMono.zip" $FONT_URL
 unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
 # Install the font into windows
-powershell -ExecutionPolicy Bypass -File .\\font.ps1 -fontPath "C:\Users\Dominik\Desktop\SANDBOX\JetBrainsMonoNerdFont-Medium.ttf"
+FONT_PATH_WINDOWS=$(cygpath -w "$(pwd)/$FONT_FILE")
+echo $FONT_PATH_WINDOWS
+powershell -ExecutionPolicy Bypass -File .\\..\\installFont.ps1 -fontPath "$FONT_PATH_WINDOWS"
 cd ".."
 rm tmp -r
 
