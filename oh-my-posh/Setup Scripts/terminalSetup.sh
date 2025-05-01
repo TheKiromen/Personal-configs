@@ -33,8 +33,7 @@ curl -L -o "JetBrainsMono.zip" $FONT_URL
 unzip JetBrainsMono.zip
 rm JetBrainsMono.zip
 # Install the font into windows
-# TODO: Pass the font file to the script as an argument
-# powershell -ExecutionPolicy Bypass -File .\\font.ps1
+powershell -ExecutionPolicy Bypass -File .\\font.ps1 -fontPath "C:\Users\Dominik\Desktop\SANDBOX\JetBrainsMonoNerdFont-Medium.ttf"
 cd ".."
 rm tmp -r
 
