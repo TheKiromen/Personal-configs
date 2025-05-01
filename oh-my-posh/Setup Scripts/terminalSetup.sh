@@ -3,29 +3,14 @@
 # Download windows terminal from Github releases
 echo "Installing Windows Terminal..."
 # choco install microsoft-windows-terminal # TODO: Verify if this works without ms store
-# Create profile for Git Bash
-WT_CONFIG="$LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
-####################################### CURRENT CONFIG BLOCK #######################################
-# {
-#     "colorScheme": "Dark+",
-#     "commandline": "%PROGRAMFILES%\\Git\\usr\\bin\\bash.exe -i -l",
-#     "font": 
-#     {
-#         "face": "JetBrainsMono Nerd Font Mono",
-#         "size": 10
-#     },
-#     "guid": "{9357d5bc-8563-41c7-aae7-f05534d6c9f3}",  <--- Verify if this can be generated through script, or Terminal has to do it
-#     "hidden": false,
-#     "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-#     "name": "Git Bash",
-#     "startingDirectory": "E:\\Projekty"
-# }
+
 
 # Pull the font from the repo
 echo "Installing JetBrains Mono font..."
 FONT_DIR="tmp"
-# FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
-FONT_FILE="JetBrainsMonoNerdFontMono-ExtraBoldItalic.ttf"
+FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
+# TODO: Verify how to get font name from the font file?
+FONT_FACE_NAME="JetBrainsMono Nerd Font Mono"
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
 
 mkdir -p $FONT_DIR
@@ -40,12 +25,42 @@ powershell -ExecutionPolicy Bypass -File .\\..\\installFont.ps1 -fontPath "$FONT
 cd ".."
 rm tmp -r
 
-# # Set the font in git bash config
+# Create profile for Git Bash
+WT_CONFIG="$LOCALAPPDATA/Packages/Microsoft.WindowsTerminal_8wekyb3d8bbwe/LocalState/settings.json"
+CONFIG_UUID=$(uuidgen)
+# Check if file contains generated UUID
+MAX_ATTEMPTS=100
+ATTEMPT=0
+while grep -q "$CONFIG_UUID" "$WT_CONFIG"; do
+    CONFIG_UUID=$(uuidgen)
+    ATTEMPT=$((ATTEMPT + 1))
+    if [ $ATTEMPT -ge $MAX_ATTEMPTS ]; then
+        echo "Error: Could not generate a unique UUID after $MAX_ATTEMPTS attempts."
+        exit 1
+    fi
+done
+# Prepare the config block
+# TODO: Verify if all is escaped correctly
+# CONFIG_BLOCK=",{
+#     "colorScheme": "Dark+",
+#     "commandline": "%PROGRAMFILES%\\Git\\usr\\bin\\bash.exe -i -l",
+#     "font": 
+#     {
+#         "face": "$FONT_FACE_NAME", 
+#         "size": 10
+#     },
+#     "guid": "{$CONFIG_UUID}",
+#     "hidden": false,
+#     "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+#     "name": "Git Bash",
+#     "startingDirectory": "$HOME"
+# }"
+
+# Add new profile to the settings.json and set it as default
+
+# Set the font in git bash config in case it is used outside of windows terminal
 # if grep -q '^Font=' ~/.minttyrc; then
 #     sed -i '/^Font=/c\Font=JetBrainsMono NFM Medium' ~/.minttyrc
 # else
 #     echo 'Font=JetBrainsMono NFM Medium' >> ~/.minttyrc
 # fi
-
-# Set the font in Windows Terminal config
-# TODO: Grep for bash profile section and replace font.face param
