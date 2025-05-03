@@ -2,7 +2,6 @@ param (
     [string]$fontPath
 )
 
-# $FontPath = "C:\Users\Dominik\Desktop\SANDBOX\BigBlueTermPlusNerdFont-Regular.ttf"
 $ShellApp = New-Object -ComObject Shell.Application
 $FontFile = Get-Item $fontPath
 
@@ -14,3 +13,9 @@ if (-not (Test-Path "C:\Windows\Fonts\$($FontFile.Name)")) {
 } else {
     Write-Output "Font already exists in system directory"
 }
+
+# Get the font name from .ttf file
+Add-Type -AssemblyName PresentationCore
+$glyphTypeface = New-Object Windows.Media.GlyphTypeface $fontPath
+$fontName = $glyphTypeface.Win32FamilyNames.Values
+return $fontName

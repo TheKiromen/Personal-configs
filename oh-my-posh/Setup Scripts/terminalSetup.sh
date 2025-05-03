@@ -9,8 +9,6 @@ echo "Installing Windows Terminal..."
 echo "Installing JetBrains Mono font..."
 FONT_DIR="tmp"
 FONT_FILE="JetBrainsMonoNerdFont-Medium.ttf"
-# TODO: Verify how to get font name from the font file?
-FONT_FACE_NAME="JetBrainsMono Nerd Font Mono"
 FONT_URL="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
 
 mkdir -p $FONT_DIR
@@ -21,7 +19,7 @@ rm JetBrainsMono.zip
 # Install the font into windows
 FONT_PATH_WINDOWS=$(cygpath -w "$(pwd)/$FONT_FILE")
 echo $FONT_PATH_WINDOWS
-powershell -ExecutionPolicy Bypass -File .\\..\\installFont.ps1 -fontPath "$FONT_PATH_WINDOWS"
+FONT_FACE_NAME=$(powershell -ExecutionPolicy Bypass -File .\\..\\installFont.ps1 -fontPath "$FONT_PATH_WINDOWS")
 cd ".."
 rm tmp -r
 
