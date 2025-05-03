@@ -38,27 +38,27 @@ while grep -q "$CONFIG_UUID" "$WT_CONFIG"; do
     fi
 done
 # Prepare the config block
-# TODO: Verify if all is escaped correctly
-# CONFIG_BLOCK=",{
-#     "colorScheme": "Dark+",
-#     "commandline": "%PROGRAMFILES%\\Git\\usr\\bin\\bash.exe -i -l",
-#     "font": 
-#     {
-#         "face": "$FONT_FACE_NAME", 
-#         "size": 10
-#     },
-#     "guid": "{$CONFIG_UUID}",
-#     "hidden": false,
-#     "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
-#     "name": "Git Bash",
-#     "startingDirectory": "$HOME"
-# }"
+CONFIG_BLOCK=",{
+    \"colorScheme\": \"Dark+\",
+    \"commandline\": \"%PROGRAMFILES%\\\\Git\\\\usr\\\\bin\\\\bash.exe -i -l\",
+    \"font\": {
+        \"face\": \"$FONT_FACE_NAME\",
+        \"size\": 10
+    },
+    \"guid\": \"{$CONFIG_UUID}\",
+    \"hidden\": false,
+    \"icon\": \"C:\\\\Program Files\\\\Git\\\\mingw64\\\\share\\\\git\\\\git-for-windows.ico\",
+    \"name\": \"Git Bash\",
+    \"startingDirectory\": \"$HOME\"
+}"
 
 # Add new profile to the settings.json and set it as default
 
-# Set the font in git bash config in case it is used outside of windows terminal
-# if grep -q '^Font=' ~/.minttyrc; then
-#     sed -i '/^Font=/c\Font=JetBrainsMono NFM Medium' ~/.minttyrc
-# else
-#     echo 'Font=JetBrainsMono NFM Medium' >> ~/.minttyrc
-# fi
+
+# Update git bash settings just in case
+Set the font in git bash config in case it is used outside of windows terminal
+if grep -q '^Font=' ~/.minttyrc; then
+    sed -i '/^Font=/c\Font=JetBrainsMono NFM Medium' ~/.minttyrc
+else
+    echo 'Font=JetBrainsMono NFM Medium' >> ~/.minttyrc
+fi
