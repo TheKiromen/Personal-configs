@@ -4,12 +4,12 @@
 cd $HOME
 
 #Install packages
-choco install -y terraform
-choco install -y kubens kubectx
+choco install -Y terraform
+choco install -Y kubens kubectx
 
 # Setup OMP
 echo "Setting up OMP..."
-choco install -y oh-my-posh
+choco install -Y oh-my-posh
 
 # Setup .bashrc and themes
 echo "Setting up .bashrc..."

@@ -2,8 +2,8 @@
 
 # Download windows terminal from Github releases
 echo "Preinstalling necessary packages..."
-# choco install microsoft-windows-terminal # TODO: Verify if this works without ms store
-# choco install jq
+# choco install microsoft-windows-terminal -Y # TODO: Verify if this works without ms store
+# choco install jq -Y
 
 
 # Pull the font from the repo
