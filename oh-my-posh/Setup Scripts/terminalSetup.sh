@@ -57,7 +57,8 @@ EOF
 )
 
 # Add new profile to the settings.json and set it as default
-
+jq --argjson bashProfile "$CONFIG_BLOCK" '.profiles.list += [$bashProfile]' "$WT_CONFIG" > temp.json && mv temp.json settings.json
+jq --arg newDefaultProfile "{$CONFIG_UUID}" '.defaultProfile = $newDefaultProfile' "$WT_CONFIG" > temp.json && mv temp.json settings.json
 
 # Update git bash settings just in case
 Set the font in git bash config in case it is used outside of windows terminal
