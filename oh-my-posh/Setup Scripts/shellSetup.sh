@@ -3,10 +3,6 @@
 #Initialize the script
 cd $HOME
 
-#Install packages
-choco install -Y terraform
-choco install -Y kubens kubectx
-
 # Setup OMP
 echo "Setting up OMP..."
 choco install -Y oh-my-posh
@@ -21,3 +17,11 @@ rm -rf ~/temp-configs
 
 # Setup OMP plugins
 echo "Setting up OMP plugins..."
+
+# Refresh bash
+exec bash
+
+#Install packages
+choco install -Y python
+choco install -Y terraform
+choco install -Y kubens kubectx
