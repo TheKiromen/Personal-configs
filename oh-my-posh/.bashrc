@@ -9,3 +9,4 @@ PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
 alias ls='lsd -la'
 alias tf='terraform'
 alias q='exit'
+alias ex='exit'
