@@ -13,6 +13,11 @@ choco install -Y oh-my-posh
 
 # Setup .bashrc and themes
 echo "Setting up .bashrc..."
+git clone https://github.com/TheKiromen/Personal-configs.git ~/temp-configs
+cp -r ~/temp-configs/oh-my-posh/BashThemes ~/BashThemes
+cp -f ~/temp-configs/oh-my-posh/.bashrc ~/.bashrc
+cp -f ~/temp-configs/oh-my-posh/.bash_profile ~/.bash_profile
+rm -rf ~/temp-configs
 
 # Setup OMP plugins
 echo "Setting up OMP plugins..."
