@@ -22,6 +22,7 @@ echo "Setting up OMP plugins..."
 exec bash
 
 #Install packages
+choco install -Y lsd
 choco install -Y python
 choco install -Y terraform
 choco install -Y kubens kubectx
