@@ -23,6 +23,7 @@ exec bash
 
 #Install packages
 choco install -Y lsd
+choco install -Y dive
 choco install -Y python
 choco install -Y terraform
 choco install -Y kubens kubectx
