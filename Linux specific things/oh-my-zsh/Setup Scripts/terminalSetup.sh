@@ -5,6 +5,7 @@ echo "Setting up ZSH..."
 sudo apt install -y zsh
 # Make ZSH the default shell, restart needed for this to take effect
 chsh -s $(which zsh)
+exec $(which zsh)
 
 # Setup .zshrc and themes
 echo "Setting up .zshrc..."
