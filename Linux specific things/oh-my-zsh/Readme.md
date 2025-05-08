@@ -15,7 +15,7 @@
 
 ## Terminal stuff
 ### Oh My ZSH setup
-- [ZSH Installation Guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) - 
+- [ZSH Installation Guide](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 - [Themes Gallery](https://github.com/ohmyzsh/ohmyzsh/wiki/themes) - Explore and preview available themes for Oh My ZSH.
 - [Powerlevel10k ZSH](https://github.com/romkatv/powerlevel10k) - Nice ZSH base theme
 - [Quick ZSH setup](https://www.youtube.com/watch?v=80PHRWH84Tc) - Youtube video with quick setup of ZSH on Linux

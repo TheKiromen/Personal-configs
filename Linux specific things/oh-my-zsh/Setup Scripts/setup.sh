@@ -3,8 +3,7 @@
 
 # Setup ZSH
 echo "Setting up ZSH..."
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
-chsh -s $(which zsh)
+sudo apt install zsh
 
 # Setup ZSH plugins
 echo "Setting up ZSH plugins..."
