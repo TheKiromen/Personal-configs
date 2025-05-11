@@ -12,6 +12,9 @@ sudo apt install git-all
 
 # Setup .zshrc and themes
 echo "Setting up .zshrc..."
+git clone https://github.com/TheKiromen/Personal-configs.git
+cp Personal-configs/Linux\ specific\ things/oh-my-zsh/.zshrc ~/
+rm -rf Personal-configs
 
 # Setup ZSH plugins
 echo "Setting up ZSH plugins..."
