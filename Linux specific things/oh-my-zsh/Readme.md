@@ -8,9 +8,10 @@
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Glava](https://github.com/jarcode-foss/glava)
 
-#### Extensions
+#### Extensions and Utils
 - [Open Lens node pod menu](https://github.com/alebcay/openlens-node-pod-menu) - Additional options in context menus
 - [TabsCopier](https://addons.mozilla.org/en-US/firefox/addon/tabs-copier/) - Firefox extension for copying tabs
+- [Dive](https://github.com/wagoodman/dive) - Handy tool for disassembling docker images
 
 <br>
 
