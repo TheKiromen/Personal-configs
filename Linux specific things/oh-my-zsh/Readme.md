@@ -6,6 +6,7 @@
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [OpenLens](https://github.com/MuhammedKalkan/OpenLens)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Glava](https://github.com/jarcode-foss/glava)
 
 #### Extensions
 - [Open Lens node pod menu](https://github.com/alebcay/openlens-node-pod-menu) - Additional options in context menus
