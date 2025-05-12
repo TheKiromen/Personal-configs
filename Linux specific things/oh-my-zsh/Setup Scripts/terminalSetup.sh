@@ -8,7 +8,16 @@ chsh -s $(which zsh)
 
 # Install required packages
 echo "Installing packages required for setup..."
-sudo apt install git-all
+sudo apt install -y git-all
+
+# Install Oh My Zsh
+echo "Installing Oh My Zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+# Setup ZSH plugins
+echo "Setting up ZSH plugins..."
 
 # Setup .zshrc and themes
 echo "Setting up .zshrc..."
@@ -16,9 +25,6 @@ git clone https://github.com/TheKiromen/Personal-configs.git
 cp Personal-configs/Linux\ specific\ things/oh-my-zsh/.zshrc ~/
 cp -r Personal-configs/Linux\ specific\ things/oh-my-zsh/ZshThemes ~/ZshThemes
 rm -rf Personal-configs
-
-# Setup ZSH plugins
-echo "Setting up ZSH plugins..."
 
 # Install supplementary packages
 echo "Installing supplementary packages..."
