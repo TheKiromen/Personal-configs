@@ -16,14 +16,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
-# Setup ZSH plugins
-echo "Setting up ZSH plugins..."
-
-# Setup .zshrc and themes
+# Setup terminal based on configs in github
 echo "Setting up .zshrc..."
 git clone https://github.com/TheKiromen/Personal-configs.git
 cp Personal-configs/Linux\ specific\ things/oh-my-zsh/.zshrc ~/
-cp -r Personal-configs/Linux\ specific\ things/oh-my-zsh/ZshThemes ~/ZshThemes
+mkdir -p $ZSH/custom
+cp Personal-configs/Linux\ specific\ things/oh-my-zsh/aliases.zsh $ZSH/custom/aliases.zsh
 rm -rf Personal-configs
 
 # Install supplementary packages
