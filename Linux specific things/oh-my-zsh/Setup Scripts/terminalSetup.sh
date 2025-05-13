@@ -24,6 +24,10 @@ mv "$TEMP_DIR/JetBrainsMonoNerdFont-Regular.ttf" ~/.local/share/fonts
 fc-cache -fv
 rm -rf "$TEMP_DIR"
 
+# Setup Powerlevel10k
+echo "Setting up Powerlevel10k..."
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+
 # Setup terminal based on configs in github
 echo "Setting up .zshrc..."
 git clone https://github.com/TheKiromen/Personal-configs.git
