@@ -15,6 +15,14 @@ echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+# Install the font
+TEMP_DIR=$(mktemp -d)
+curl -fLo "$TEMP_DIR/JetBrainsMono.zip" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/JetBrainsMono.zip"
+unzip "$TEMP_DIR/JetBrainsMono.zip" -d "$TEMP_DIR"
+mkdir -p ~/.local/share/fonts
+mv "$TEMP_DIR/JetBrainsMonoNerdFont-Regular.ttf" ~/.local/share/fonts
+fc-cache -fv
+rm -rf "$TEMP_DIR"
 
 # Setup terminal based on configs in github
 echo "Setting up .zshrc..."
