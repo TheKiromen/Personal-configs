@@ -33,6 +33,7 @@ git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerl
 echo "Setting up .zshrc..."
 git clone https://github.com/TheKiromen/Personal-configs.git
 cp Personal-configs/Linux\ specific\ things/oh-my-zsh/.zshrc ~/
+cp Personal-configs/Linux\ specific\ things/oh-my-zsh/.p10k.zsh ~/
 mkdir -p $ZSH/custom
 cp Personal-configs/Linux\ specific\ things/oh-my-zsh/aliases.zsh $ZSH/custom/aliases.zsh
 rm -rf Personal-configs
