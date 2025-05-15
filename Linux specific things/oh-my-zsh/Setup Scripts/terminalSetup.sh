@@ -23,8 +23,7 @@ mkdir -p ~/.local/share/fonts
 mv "$TEMP_DIR/JetBrainsMonoNerdFont-Regular.ttf" ~/.local/share/fonts
 fc-cache -fv
 rm -rf "$TEMP_DIR"
-gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font Regular 10' # TODO: verify this works
-# gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font:style=Regular:size=10'
+gsettings set org.gnome.desktop.interface monospace-font-name 'JetBrainsMono Nerd Font 10'
 
 # Setup Powerlevel10k
 echo "Setting up Powerlevel10k..."
