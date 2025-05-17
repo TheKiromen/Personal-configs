@@ -5,10 +5,6 @@
 - [Chocolatey](https://chocolatey.org/install#individual)
 - [Git Bash](https://gitforwindows.org/)
 
-<!-- TRYING TO DO IT THROUGH SCRIPT, MIGHT BE OPTIONAL -->
-- [Git Bash in Terminal](https://www.youtube.com/watch?v=aQDsgCV4US0&) - Youtube video showing how to easily setup GitBash as default shell in windows Terminal
-- [Download Windows Terminal without MS store](https://github.com/microsoft/terminal/releases)
-
 #### Daily usage
 - [JetBrains Rider](https://www.jetbrains.com/rider/download/#section=windows)
 - [Docker](https://www.docker.com/products/docker-desktop/)
@@ -23,6 +19,10 @@
 <br>
 
 ## Terminal stuff
+### Windows Terminal
+- [Git Bash in Terminal](https://www.youtube.com/watch?v=aQDsgCV4US0&) - Youtube video showing how to easily setup GitBash as default shell in windows Terminal
+- [Download Windows Terminal without MS store](https://github.com/microsoft/terminal/releases)
+
 ### Oh My Posh setup
 - [Oh My Posh Installation Documentation](https://ohmyposh.dev/docs/installation/windows) - Official documentation for configuring and using Oh My Posh
 - [Oh My Posh GitHub Repository](https://github.com/JanDeDobbeleer/oh-my-posh) - Oh My Posh main repo
