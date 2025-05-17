@@ -14,6 +14,7 @@
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [OpenLens](https://github.com/MuhammedKalkan/OpenLens)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Insomnia](https://insomnia.rest/)
 
 #### Extensions
 - [Open Lens node pod menu](https://github.com/alebcay/openlens-node-pod-menu) - Additional options in context menus
