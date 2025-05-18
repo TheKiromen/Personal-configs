@@ -12,7 +12,7 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 
 # Add dotnet cli to path
-export PATH="$PATH:~/.dotnet"
+export PATH=$PATH:$HOME/.dotnet
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
