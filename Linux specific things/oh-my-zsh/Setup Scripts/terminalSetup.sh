@@ -44,5 +44,10 @@ DIVE_VERSION=$(curl -sL "https://api.github.com/repos/wagoodman/dive/releases/la
 curl -fOL "https://github.com/wagoodman/dive/releases/download/v${DIVE_VERSION}/dive_${DIVE_VERSION}_linux_amd64.deb"
 sudo apt install ./dive_${DIVE_VERSION}_linux_amd64.deb
 
+sudo apt-get update && \
+  sudo apt-get install -y dotnet-sdk-9.0
+sudo apt-get update && \
+  sudo apt-get install -y aspnetcore-runtime-9.0
+
 # Prompt user to restart the computer
 echo "ZSH setup complete. Please restart your computer for the changes to take effect."
