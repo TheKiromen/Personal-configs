@@ -11,8 +11,12 @@
 - [OpenLens](https://github.com/MuhammedKalkan/OpenLens)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Insomnia](https://insomnia.rest/)
+- [Bitwarden](https://bitwarden.com/)
 
-#### Extensions
+#### Other programs
+- [Minikube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download)
+
+#### Extensions and Utils
 - [Open Lens node pod menu](https://github.com/alebcay/openlens-node-pod-menu) - Additional options in context menus
 - [TabsCopier](https://addons.mozilla.org/en-US/firefox/addon/tabs-copier/) - Firefox extension for copying tabs
 
