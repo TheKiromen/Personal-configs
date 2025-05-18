@@ -6,7 +6,6 @@
 - [Docker](https://www.docker.com/products/docker-desktop/)
 - [OpenLens](https://github.com/MuhammedKalkan/OpenLens)
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [Glava](https://github.com/jarcode-foss/glava)
 - [Insomnia](https://insomnia.rest/)
 - [Bitwarden](https://bitwarden.com/)
 
