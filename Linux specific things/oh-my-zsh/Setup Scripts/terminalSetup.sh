@@ -40,14 +40,20 @@ rm -rf Personal-configs
 
 # Install supplementary packages
 echo "Installing supplementary packages..."
-DIVE_VERSION=$(curl -sL "https://api.github.com/repos/wagoodman/dive/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
-curl -fOL "https://github.com/wagoodman/dive/releases/download/v${DIVE_VERSION}/dive_${DIVE_VERSION}_linux_amd64.deb"
-sudo apt install ./dive_${DIVE_VERSION}_linux_amd64.deb
-
+# Dotnet
 sudo apt-get update && \
   sudo apt-get install -y dotnet-sdk-9.0
 sudo apt-get update && \
   sudo apt-get install -y aspnetcore-runtime-9.0
+# Docker
+sudo apt-get install -y docker.io
+sudo systemctl enable docker
+# Dive
+DIVE_VERSION=$(curl -sL "https://api.github.com/repos/wagoodman/dive/releases/latest" | grep '"tag_name":' | sed -E 's/.*"v([^"]+)".*/\1/')
+curl -fOL "https://github.com/wagoodman/dive/releases/download/v${DIVE_VERSION}/dive_${DIVE_VERSION}_linux_amd64.deb"
+sudo apt install ./dive_${DIVE_VERSION}_linux_amd64.deb
+
+
 
 # Prompt user to restart the computer
 echo "ZSH setup complete. Please restart your computer for the changes to take effect."

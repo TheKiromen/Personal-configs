@@ -3,7 +3,6 @@
 ## Programs
 #### Daily usage
 - [JetBrains Rider](https://www.jetbrains.com/rider/download/#section=windows)
-- [Docker](https://www.docker.com/products/docker-desktop/)
 - [OpenLens](https://github.com/MuhammedKalkan/OpenLens)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Insomnia](https://insomnia.rest/)
