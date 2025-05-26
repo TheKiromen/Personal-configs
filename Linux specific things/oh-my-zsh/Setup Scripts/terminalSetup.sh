@@ -35,7 +35,7 @@ git clone https://github.com/TheKiromen/Personal-configs.git
 cp Personal-configs/Linux\ specific\ things/oh-my-zsh/.zshrc ~/
 cp Personal-configs/Linux\ specific\ things/oh-my-zsh/.p10k.zsh ~/
 mkdir -p $ZSH/custom
-cp Personal-configs/Linux\ specific\ things/oh-my-zsh/aliases.zsh $ZSH/custom/aliases.zsh
+cp Personal-configs/Linux\ specific\ things/oh-my-zsh/.aliases.zsh $HOME/.aliases.zsh
 rm -rf Personal-configs
 
 # Install supplementary packages
