@@ -61,7 +61,10 @@ sudo apt install -y copyq
 copyq &
 sleep 5  # wait for CopyQ to start and create config files
 copyq config autostart true
-
+gsettings set org.cinnamon.desktop.keybindings custom-list "['custom0']"
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ name 'Show CopyQ'
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ command 'copyq show'
+gsettings set org.cinnamon.desktop.keybindings.custom-keybinding:/org/cinnamon/desktop/keybindings/custom-keybindings/custom0/ binding "['<Super>v']"
 
 # Prompt user to restart the computer
 echo "ZSH setup complete. Please restart your computer for the changes to take effect."
