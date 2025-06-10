@@ -56,6 +56,9 @@ sudo apt install ./dive_${DIVE_VERSION}_linux_amd64.deb
 sudo apt install -y fzf
 # Lsd
 sudo apt install -y lsd
+# Clipboard history
+sudo apt install -y copyq
+
 
 # Prompt user to restart the computer
 echo "ZSH setup complete. Please restart your computer for the changes to take effect."
