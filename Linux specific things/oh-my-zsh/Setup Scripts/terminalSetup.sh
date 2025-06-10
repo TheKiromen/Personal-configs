@@ -58,6 +58,9 @@ sudo apt install -y fzf
 sudo apt install -y lsd
 # Clipboard history
 sudo apt install -y copyq
+copyq &
+sleep 5  # wait for CopyQ to start and create config files
+copyq config autostart true
 
 
 # Prompt user to restart the computer
