@@ -14,6 +14,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # Add dotnet cli to path
 export PATH=$PATH:$HOME/.dotnet
 
+# FZF default options
+export FZF_DEFAULT_OPTS="--height=70% --layout=reverse --border --preview='fzf-preview.sh {}' --bind='focus:transform-header:file --brief={}'"
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
