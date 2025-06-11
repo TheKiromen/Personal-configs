@@ -54,6 +54,7 @@ curl -fOL "https://github.com/wagoodman/dive/releases/download/v${DIVE_VERSION}/
 sudo apt install ./dive_${DIVE_VERSION}_linux_amd64.deb
 # Fzf
 sudo apt install -y fzf
+export FZF_DEFAULT_OPTS="--height=50% --layout=reverse --border"
 # Lsd
 sudo apt install -y lsd
 # Clipboard history
