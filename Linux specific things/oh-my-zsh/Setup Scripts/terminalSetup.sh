@@ -53,7 +53,8 @@ DIVE_VERSION=$(curl -sL "https://api.github.com/repos/wagoodman/dive/releases/la
 curl -fOL "https://github.com/wagoodman/dive/releases/download/v${DIVE_VERSION}/dive_${DIVE_VERSION}_linux_amd64.deb"
 sudo apt install ./dive_${DIVE_VERSION}_linux_amd64.deb
 # Fzf
-sudo apt install -y fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
 export FZF_DEFAULT_OPTS="--height=50% --layout=reverse --border"
 # Lsd
 sudo apt install -y lsd
