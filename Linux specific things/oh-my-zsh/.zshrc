@@ -16,6 +16,7 @@ export PATH=$PATH:$HOME/.dotnet
 
 # FZF default options
 export FZF_DEFAULT_OPTS="--height=70% --layout=reverse --border --preview='fzf-preview.sh {}' --bind='focus:transform-header:file --brief={}'"
+export FZF_CTRL_R_OPTS="--preview=''"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
