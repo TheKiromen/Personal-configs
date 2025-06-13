@@ -1,6 +1,8 @@
 # Aliases
 alias ls="lsd -la"
 alias h="history"
+alias bat="batcat"
+alias cat="batcat"
 
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
